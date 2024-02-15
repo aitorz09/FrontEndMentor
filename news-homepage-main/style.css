@@ -1,0 +1,232 @@
+:root{
+    --ff-inter-: "Inter", sans-serif;
+    --fw-400: 400;
+    --fw-700: 700;
+    --fw-800: 800;
+    --clr-orange-principal: hsl(35 77% 62%);
+    --clr-red-principal: hsl(5 85% 63%);
+    --clr-off-white:hsl(36 100% 99%);
+    --clr-grayblue: hsl(233, 8%, 79%);
+    --clr-darkgrayblue: hsl(236 13% 42%);
+    --clr-verydarkblue: 240 84% 13%;
+    --clr-darkblue: hsl(236.84 97% 9%);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  ol, ul {
+	list-style: none;
+}
+/* HEADER */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem 0rem;
+}
+header ul{
+    display: none;
+    gap: 1rem;
+}
+header a{
+    text-decoration: none;
+    color: black;
+    padding: .3rem;
+    transition: box-shadow  500ms ease;
+}
+header a:hover{
+    box-shadow: 
+    0 0 2px 1px var(--clr-grayblue),
+    0 0 4px 2px hsl(var(--clr-verydarkblue));
+
+}
+header a:active{
+    background-color: hsl(var(--clr-verydarkblue));
+    color: var(--clr-off-white);
+}
+/* BODY */
+body{
+
+    margin: 1rem;
+    font-size: 1rem;
+    color: hsl(var(--clr-verydarkblue) / .7);
+    font-family: var(--ff-inter-);
+    font-weight: var(--fw-400);
+    background-color: var(--clr-off-white);
+
+}
+h1{
+    font-size: 3rem;
+    color: hsl(var(--clr-verydarkblue));
+    line-height: 2.8rem;
+    margin: 1rem 0rem;
+    font-weight: var(--fw-800);
+    text-align: left;
+    padding: 1rem;
+}
+/* FIRST ARTICLE */
+.first-article p{
+    margin-bottom: 1.5rem;
+}
+.first-article section{
+    display: flex;
+    flex-direction: column;
+}
+.first-article a{
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    width: 50%;
+    padding: .5rem;
+    background-color: var(--clr-red-principal);
+    color: var(--clr-off-white);
+}
+.first-article img{
+    padding: .2rem;
+}
+/* SECOND ARTICLE */
+.article-questions{
+    background-color: var(--clr-darkblue);
+    color: var(--clr-off-white);
+    padding: 1.5rem;
+    margin: 2rem 0rem;
+} 
+.article-questions h2{
+    color: var(--clr-orange-principal);
+    margin-bottom: 1rem;
+    font-weight: var(--fw-800);
+    font-size: 2rem;
+} 
+.article-questions h3{
+    font-size: 1.3rem;
+    margin: 0.8rem 0rem;
+}
+.article-questions p{
+    color: hsl(36, 100%, 99%, 0.7);
+    margin-bottom: 1rem;
+}
+hr{
+    margin: 2rem 0rem;
+}
+
+/* Third Article */
+.third-article{
+    display: grid;
+    grid-template-columns: 33% 2fr;
+    grid-template-rows: auto;
+    gap: 3rem 1.5rem;
+    margin-bottom: 3rem;
+}
+.third-article img{
+    width: 100%;
+    height: 100%;
+}
+
+.third-article h4{
+    color: var(--clr-grayblue);
+    font-size: 3rem;
+}
+h5{
+    font-size: 1.4rem;
+    color: hsl(var(--clr-verydarkblue));
+}
+.third-article section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.main{
+
+}
+@media (width > 600px){
+    header ul{
+        display: flex;
+        
+    }
+    div>svg{
+        display: none;
+    }
+    body{
+        padding: 3rem;
+    }
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: auto;
+        gap: 1rem;
+    }
+    .first-article{
+        grid-column: 1 / 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: auto;
+    }
+    .first-article picture{
+        grid-column: 1 / 3;
+    }.article-questions{
+        margin: 0rem;
+    }
+    h1{
+        margin: 2rem 1rem 2rem 0rem;
+    }
+    .first-article p{
+        margin: 2rem 0rem;
+    }
+    .third-article{
+       display: grid;
+       grid-template-columns: repeat(3, 1fr 3fr);
+       grid-auto-rows: auto;
+       margin: 3rem 0rem;
+    }
+
+}
+/* .img1{
+    grid-area: img1;
+}
+.img2{
+    grid-area: img2;
+}
+.img3{
+    grid-area: img3;
+}
+.section01{
+    grid-area: section1;
+}
+.section02{
+    grid-area: section2;
+}
+.section03{
+    grid-area: section03;
+} */
