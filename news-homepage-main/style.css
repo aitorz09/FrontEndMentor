@@ -96,6 +96,10 @@ h1{
     padding: 1rem;
 }
 /* FIRST ARTICLE */
+.first-article{
+    display: grid;
+
+}
 .first-article p{
     margin-bottom: 1.5rem;
 }
@@ -115,6 +119,7 @@ h1{
 }
 .first-article img{
     padding: .2rem;
+    height: 100%;
 }
 /* SECOND ARTICLE */
 .article-questions{
@@ -144,7 +149,7 @@ hr{
 /* Third Article */
 .third-article{
     display: grid;
-    grid-template-columns: 33% 2fr;
+    grid-template-columns: 1fr 3fr;
     grid-template-rows: auto;
     gap: 3rem 1.5rem;
     margin-bottom: 3rem;
@@ -167,9 +172,7 @@ h5{
     flex-direction: column;
     justify-content: space-between;
 }
-.main{
 
-}
 @media (width > 600px){
     header ul{
         display: flex;
@@ -206,7 +209,7 @@ h5{
     }
     .third-article{
        display: grid;
-       grid-template-columns: repeat(3, 1fr 3fr);
+       grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
        grid-auto-rows: auto;
        margin: 3rem 0rem;
     }
