@@ -55,7 +55,7 @@ header{
     align-items: center;
     margin: 1.5rem 0rem;
 }
-header ul{
+header menu{
     display: none;
     gap: 1rem;
 }
@@ -93,7 +93,8 @@ h1{
     margin: 1rem 0rem;
     font-weight: var(--fw-800);
     text-align: left;
-    padding: 1rem;
+    /* padding: 1rem; */
+    width: 100%;
 }
 /* FIRST ARTICLE */
 .first-article{
@@ -174,7 +175,7 @@ h5{
 }
 
 @media (width > 600px){
-    header ul{
+    header menu{
         display: flex;
         
     }
