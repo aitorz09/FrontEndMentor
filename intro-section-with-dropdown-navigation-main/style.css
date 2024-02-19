@@ -100,7 +100,6 @@ header{
 }
 .close-menu{
     position: absolute;
-    top: 10px;
     right: 2rem;
 }
 
@@ -112,7 +111,8 @@ header{
     height: 100%;
     flex-direction: column;
     text-align: left;
-    padding: 2rem;
+    padding: 3rem;
+    
 }
 .register-wrap{
     display: flex;
@@ -122,9 +122,7 @@ header{
     align-content: center;
     gap: 1rem;
 }
-.menu-:hover ~ .bkg-wrap {
-    display: block;
-  }
+
 /* DESKTOP MENU */
 .desktop-menu-display{
     display: none;
@@ -132,12 +130,18 @@ header{
 .register-wrap-desktop{
     display: none;
 }
-.menu-horizontal-desktop a{
+.menu-horizontal-desktop li a{
     text-decoration: none;
 }
+.menu-horizontal-desktop a:hover{
+    text-decoration: black;
+}
+
 .menu-horizontal-desktop{
     display: flex;
-    
+}
+.sub-menu-features{
+    display: non;
 }
 /* MAIN */
 main{
@@ -179,6 +183,7 @@ main p{
     box-shadow: 
     0 0 3px 1px blue;
 }
+
 
 /* FOOTER */
 footer section{
@@ -229,6 +234,9 @@ footer section{
     .main-desc p{
         font-size: 1.5rem;
         text-align: left;
+    }
+    .learn-more{
+        align-self: flex-start;
     }
     footer{
         align-self: flex-end;
