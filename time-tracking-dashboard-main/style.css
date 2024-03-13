@@ -1,0 +1,160 @@
+:root{
+--Blue: hsl(246, 80%, 60%);
+
+--Lightredwork: hsl(15, 100%, 70%);
+--Softblueplay: hsl(195, 74%, 62%);
+--Lightredstudy: hsl(348, 100%, 68%);
+--Limegreenexercise: hsl(145, 58%, 55%);
+--Violetsocial: hsl(264, 64%, 52%);
+--Softorangeselfcare: hsl(43, 84%, 65%);
+
+
+
+--Verydarkblue: hsl(226 43% 10%);
+--Darkblue: hsl(235 46% 20%);
+--Desaturatedblue: hsl(235 45% 61%);
+--PaleBlue: hsl(236 100% 87%);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  ol, ul {
+	list-style: none;
+    padding: 0;
+}
+/* HEADER */
+body{
+    background-color: var(--Verydarkblue);
+    padding: 1rem;
+}
+header{
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    align-items: center;
+    color: #fffe;
+    font-family: "Rubik", sans-serif;
+    font-weight: 300;
+    border-radius: 20px;
+    background-color: var(--Darkblue);
+   
+}
+
+header img{
+    width: 70px;
+    border: 3px solid white;
+    border-radius: 50px;
+    text-align: center;
+
+}
+header h1{
+    font-size: 26px;
+    font-weight: normal;
+}
+.div{
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+header div:first-child{
+    display: flex;
+    background-color: var(--Blue);
+    padding: 2rem;
+    
+    border-radius:10px ;
+}
+header > div:last-child{
+    height: 100%;
+    padding: 1rem 1rem 0rem 1rem;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+header ul{
+    display: flex;
+    justify-content: space-between;
+}
+header a{
+    color: var(--Desaturatedblue);
+    text-decoration: none;
+}
+header div div{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-left: 1rem;
+    
+}
+/* MAIN */
+main{
+    margin: 1rem auto;
+    font-family: "Rubik";
+    font-weight: 300;
+}
+main section article::before{
+    
+}
+main section{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+main section article{
+    background-color: var(--Darkblue);
+    border-radius: 10px;
+}
+.div-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    line-height: .4;
+}
+main p:first-child{
+    color: white;
+}
+main p:last-child{
+    color: var(--Desaturatedblue);
+}
+h2{
+    color: white;
+    font-weight: 30;
+}
+.bkg{
+  background-color: rebeccapurple;
+  z-index: -1;
+  border-radius: 50px;
+}
+
+
